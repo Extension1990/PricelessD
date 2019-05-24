@@ -3,7 +3,7 @@ const http = require('http') ;
 const path = require('path') ;
 
 const app = express() ;
-const port = process.env.PORT || 9000;
+const port = process.env.port;
 
 app.use('/' , express.static(__dirname + '/assess'));
 
