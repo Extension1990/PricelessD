@@ -1,0 +1,8 @@
+.logo{
+    margin: 0 auto;
+}
+
+.navbar{
+    background-image: url("../../../assets/bg.jpeg");
+    background-size: cover;
+}

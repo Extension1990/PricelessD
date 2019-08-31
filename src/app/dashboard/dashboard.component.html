@@ -1,0 +1,73 @@
+
+<app-topnav></app-topnav>
+<app-navbar></app-navbar>
+<!-- <app-sidebar></app-sidebar> -->
+
+<div class="content">
+  <!-- Page title -->
+  <!-- <div class="title mt-4"><strong>LIST OF WORLD'S COUNTRIES</strong></div> -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let country of countries">
+        <!-- Loop for cards -->
+        <div class="flip-card mt-3">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="mr-5" src="{{country.flag}}" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <p class="mt-5">
+                  Name: {{ country.name }}<br>
+                  Region: {{ country.region }}<br>
+                  Capital: {{ country.capital }}<br>
+                  Native name: {{ country.nativeName }}
+                </p>
+                <div class="btn-group">
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" (click)="showModal(country)">Deatails</button>&nbsp;&nbsp;
+                  <button class="btn btn-primary">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">{{ details.name }}&nbsp;Details</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                      <img class="img-thumbnail img-fluid my-2" src="{{ details.flag }}" />
+                  </div>
+                  <div class="col-md-6 text-left my-auto">
+                    Region: {{ details.region }}<br>
+                    Capital: {{ details.capital }}<br>
+                    Native name: {{ details.nativeName }}
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

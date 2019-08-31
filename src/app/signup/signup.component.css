@@ -1,0 +1,65 @@
+/*
+  Card styles
+*/
+
+.card{
+  margin-top: 40px;
+  box-shadow: 0px 2px 15px 0px rgb(114, 114, 114);
+}
+
+/*
+  Form styles
+*/
+.form-group{
+  margin: 40px;
+}
+/*
+  Buttons styles
+*/
+.btn-group{
+  margin: 0 auto;
+}
+.btn{
+  border: none;
+  background-color: rgb(79, 169, 202);
+}
+.btn:hover{
+  box-shadow: 0px 2px 5px 0px rgb(114, 114, 114);
+  background-color: rgb(44, 116, 143);
+}
+/*
+  Page Title styles
+*/
+p{
+  font-size: 50px;
+}
+
+/*
+  Inputs styles
+*/
+input {
+  outline: 0;
+  border-width: 0 0 2px 8px;
+  border-color: rgb(98, 167, 190);
+}
+input:focus {
+  border-color: rgb(98, 167, 190);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0) !important;
+}
+
+/*
+  Error messages styles
+*/
+.error-message{
+  color: red;
+}
+
+/*
+  Logo styles
+*/
+.logo{
+  width: 50%;
+}
